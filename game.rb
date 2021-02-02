@@ -2,7 +2,6 @@
 # Written by: Paloma
 
 puts "Welcome to 'Get My Numner!'"
-print "What's your name?"
 
 # Get the player's name, and greet them.
 print "What's your name?"
@@ -21,9 +20,15 @@ num_guesses = 0
 # Track whether the player has guessed correctly.
 guessed_it = false
 
+# The loop will stop after the player's 10th guess, or when they guess correctly, whichever comes first.
+while num_guesses < 10 && guessed_it == false
+
 puts "You've got #{10 - num_guesses} guesses left."
 print "Make a guess: "
 guess = gets.to_i
+
+# We need to add 1 to the guess count each loop, so we don't loop forever.
+num_guesses += 1
 
 # Compare the guess to the target.
 # Print the appropriate message.
@@ -35,6 +40,9 @@ elsif guess == target
   puts "Good job, #{name}!"
   puts "You guessed my number in #{num_guesses} guesses!"
   guessed_it = true
+end
+
+# This marks the end of the code that will loop.
 end
 
 # If player ran out of turns, tell them what the number was.
