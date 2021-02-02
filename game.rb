@@ -5,5 +5,6 @@ puts "Welcome to 'Get My Numner!'"
 print "What's your name?"
 
 input = gets
+name = input.chomp
 
-puts "Welcome, #{input}"
+puts "Welcome, #{name}!"
