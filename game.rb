@@ -21,7 +21,7 @@ num_guesses = 0
 guessed_it = false
 
 # The loop will stop after the player's 10th guess, or when they guess correctly, whichever comes first.
-while num_guesses < 10 && guessed_it == false
+until num_guesses == 10 || guessed_it
 
 puts "You've got #{10 - num_guesses} guesses left."
 print "Make a guess: "
